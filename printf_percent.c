@@ -3,11 +3,11 @@
 
 /**
  * Printf_Percent - Creating the funtion that print (%).
- * Return: Always 0
+ * Return: Always 1
  */
 
 int Printf_Percent(void)
 {
 	_putchar('%');
-	return (0);
+	return (1);
 }
