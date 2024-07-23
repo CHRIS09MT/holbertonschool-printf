@@ -14,11 +14,20 @@ int Printf_String(va_list args)
 	char *str = va_arg(args, char *);
 
 	if (str == NULL)
+	{
 		str = "(null)";
 
-	while (*str)
+		while (str[count])
+		{
+			_putchar(str[count]);
+			count++;
+		}
+		return (6);
+	}
+
+	while (*str != '\0')
 	{
-		_putchar(str);
+		_putchar(*str);
 		str++;
 		count++;
 	}
