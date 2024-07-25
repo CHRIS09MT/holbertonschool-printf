@@ -8,8 +8,8 @@
 int _printf(const char *format, ...)
 {
 	convert types[] = {
-		{"%c", Printf_Char}, {"%%", Printf_Percent},
-		{"%s", Printf_String}, {NULL, NULL}
+		{"%c", Printf_Char}, {"%%", Printf_Percent}, {"%d", Printf_Int},
+		{"%s", Printf_String}, {"%i", Printf_Int}, {NULL, NULL}
 	};
 
 	va_list ap;
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				if (format[a + 1] == types[b].type[1])
 				{
 					cant = cant + types[b].func(ap);
-break;
+					break;
 				}
 				b++;
 			}
@@ -40,7 +40,7 @@ break;
 		} else
 		{
 			_putchar(format[a]);
-cant++;
+			cant++;
 		}
 		a++;
 	}

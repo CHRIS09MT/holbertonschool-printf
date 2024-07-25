@@ -20,6 +20,7 @@ int Printf_Unknown(const char *format, int i);
 int _printf(const char *format, ...);
 int _putchar(char c);
 
+int Printf_Int(va_list args);
 int Printf_String(va_list args);
 int Printf_Percent(va_list args);
 int Printf_Char(va_list args);
