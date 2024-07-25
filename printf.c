@@ -1,13 +1,15 @@
 #include "main.h"
 #include <stdarg.h>
-
+/**
+* _printf - Function that produces output according to a format.
+* @format: The format string
+* Return: The formatted string
+*/
 int _printf(const char *format, ...)
 {
 	convert types[] = {
-		{"%c", Printf_Char},
-		{"%%", Printf_Percent},
-		{"%s", Printf_String},
-		{NULL, NULL}
+		{"%c", Printf_Char}, {"%%", Printf_Percent},
+		{"%s", Printf_String}, {NULL, NULL}
 	};
 
 	va_list ap;
@@ -28,7 +30,7 @@ int _printf(const char *format, ...)
 				if (format[a + 1] == types[b].type[1])
 				{
 					cant = cant + types[b].func(ap);
-                    break;
+break;
 				}
 				b++;
 			}
@@ -38,7 +40,7 @@ int _printf(const char *format, ...)
 		} else
 		{
 			_putchar(format[a]);
-            cant++;
+cant++;
 		}
 		a++;
 	}

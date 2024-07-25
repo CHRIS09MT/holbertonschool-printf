@@ -4,13 +4,14 @@
 
 /**
  * Printf_Char - Print a character
- * @args: The arguments
+ * @args: Variable argument list
  * Return: Always 1
  */
 
-int Printf_Char(va_list(args))
+int Printf_Char(va_list args)
 {
-    char c = va_arg(args, int);
-    _putchar(c);
-    return (1);
+	char c = va_arg(args, int);
+
+	_putchar(c);
+	return (1);
 }
