@@ -12,8 +12,11 @@
 int Printf_Int(va_list args)
 {
 	int num = va_arg(args, int);
+	int lenght = 0, digits[12];
 	int a = 0, b;
-	int len = 0, cant = num, digitos[12];
+
+	if (num < INT_MIN || num > INT_MAX)
+		return (-1);
 
 	if (num == INT_MIN)
 	{
@@ -21,27 +24,27 @@ int Printf_Int(va_list args)
 
 		for (b = 0; int_min_str[b] != '\0'; b++)
 			_putchar(int_min_str[b]);
-		return (12);
+		return (b);
 	}
 	if (num == 0)
 	{
 		_putchar('0');
-return (1);
+		return (1);
 	}
-	if (num > 0)
+	if (num < 0)
 	{
 		_putchar('-');
 		num = -num;
-		len++;
+		lenght++;
 	}
 	while (num != 0)
 	{
-		digitos[a] = num % 10;
-num /= 10;
-a++;
+		digits[a++] = num % 10;
+		num /= 10;
 	}
-	for (b = a - 1; b >= 0; b--)
-		_putchar(digitos[b] + 0);
+	lenght += a;
 
-	return (len);
+	for (b = a - 1; b >= 0; b--)
+		_putchar(digits[b] + '0');
+	return (lenght);
 }
