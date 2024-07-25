@@ -4,11 +4,10 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/** 
+/**
 * struct printf_convert - Match the conversion specifiers for printf
-* @types: The conversion specifier
+* @type: The conversion specifier
 * @func: The function to call for each conversion specifier
-* @args: The arguments
 */
 
 typedef struct printf_convert
