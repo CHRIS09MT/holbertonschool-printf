@@ -14,7 +14,7 @@ int Printf_String(va_list args)
 
 	if (str == NULL)
 	{
-		str = "(nill)";
+		str = "(null)";
 
 		while (*str)
 		{
