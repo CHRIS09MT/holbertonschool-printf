@@ -11,7 +11,7 @@
 int Printf_Unknown(const char *format, int i)
 {
 
-	if (format[i] == '\0')
+	/** if (format[i] == '\0')
 		return 0;
 
 	_putchar(format[i]);
@@ -22,5 +22,10 @@ int Printf_Unknown(const char *format, int i)
 		return (Printf_Unknown(format, i + 2));
     }
 
-	return (Printf_Unknown(format, i + 1));
+	return (Printf_Unknown(format, i + 1)); */
+
+	_putchar(format[i]);
+	_putchar(format[i + 1]);
+	return (2);
+
 }
