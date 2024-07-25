@@ -8,9 +8,9 @@
  * Return: Always 1
  */
 
-int Printf_Char(va_list args)
+int Printf_Char(va_list(args))
 {
-	_putchar(va_arg(args, int));
-
-	return (1);
+    char c = va_arg(args, int);
+    _putchar(c);
+    return (1);
 }

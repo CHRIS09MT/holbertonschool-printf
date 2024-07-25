@@ -1,36 +1,36 @@
+#include <stdarg.h>
 #include "main.h"
-#include <unistd.h>
-#include <stdlib.h>
 
 /**
- * Printf_String - This function print a string
- * @args: The print arguments
- * Return: Print the amount of characters the string
- */
+* Printf_String - Prints a string
+* @args: va_list of arguments
+* Return: Number of characters printed
+*/
 
 int Printf_String(va_list args)
 {
-	int count = 0;
 	char *str = va_arg(args, char *);
+	int cant = 0;
 
 	if (str == NULL)
 	{
-		str = "(null)";
+		str = "(nill)";
 
-		while (str[count])
+		while (*str)
 		{
-			_putchar(str[count]);
-			count++;
+			_putchar(*str);
+			cant++;
+			str++;
 		}
-		return (6);
+
+		return (cant);
 	}
 
 	while (*str != '\0')
 	{
 		_putchar(*str);
+		cant++;
 		str++;
-		count++;
 	}
-
-	return (count);
+	return (cant);
 }

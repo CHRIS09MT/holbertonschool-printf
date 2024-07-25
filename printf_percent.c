@@ -2,12 +2,13 @@
 #include "main.h"
 
 /**
- * Printf_Percent - Creating the funtion that print (%).
- * Return: Always 1
- */
+* Printf_Percent - Print a percentage
+* Return: Always 0
+*/
 
-int Printf_Percent(void)
+int Printf_Percent(va_list args)
 {
-	_putchar('%');
-	return (1);
+    (void)args;
+    _putchar('%');
+    return (1);
 }
