@@ -28,6 +28,8 @@ __`_printf(const char *format, ...);`__
   ```c
   Character: A
 
+---
+
 ### 2) `%s`
 - **Description**: Prints a string. If the string is `NULL`, it prints `(null)`.
 - **Usage**:
@@ -42,6 +44,8 @@ __`_printf(const char *format, ...);`__
 - **Output**:
   ```c
   String: (null)
+
+---
   
 ### 3) `%d` and `%i`
 - **Description**: Prints an integer in decimal format. Both `%d` and `%i` have the same behavior.
@@ -54,6 +58,8 @@ __`_printf(const char *format, ...);`__
   Integer: 42
   Integer: -42
 
+---
+
 ### 4) `%%`
 - **Description**: Prints a literal percent sign `(%)`.
 - **Usage**:
@@ -63,11 +69,71 @@ __`_printf(const char *format, ...);`__
   ```c
   Percent sign: %
 
+---
+
 ### 5) Unknown Format Specifiers
 - **Description**: If an unknown format specifier is encountered, it prints the specifier as-is. For example, `_printf("Unknown: %z\n");` will output Unknown: `%z`.
 
+---
+
+## Return Value
+- Returns the total number of characters printed. On error, a negative number is returned.
 
 >[!NOTE]
 >The function handles edge cases, such as printing integers at the boundary of the int type, including INT_MIN and 0.
 >
 >The output is produced in the order the arguments are provided, matching the format specifiers in the format string.
+
+## Installation
+To install and use the `_printf` function, follow these steps:
+
+### 1) Clone the repository:
+    git clone https://github.com/CHRIS09MT/holbertonschool-printf.git
+    
+---
+
+>[!IMPORTANT]
+> You must include this `main.c` in order to compile the `_printf.c` file
+>
+> This project is a custom implementation of the standard `printf` function in C. Ensure to follow the format specifiers correctly to get the desired output.
+### 1) Include this `main.c`:
+
+      #include "main.h"
+
+      int main(void)
+      {
+          // Test cases for _printf function
+          _printf("Character: %c\n", 'A');
+          _printf("String: %s\n", "Hello, World!");
+          _printf("Integer: %d\n", 42);
+          _printf("Percent sign: %%\n");
+          _printf("Unknown format: %z\n", 'X'); // Example of unknown specifier
+          _printf("NULL string: %s\n", NULL);
+
+          return 0;
+      }
+
+### 2) Compile the code:
+    gcc -o printf_chris -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 main.h *.c
+
+### 3) Run your program:
+    ./printf_chris
+
+## Installation of the Man Page
+
+>[!IMPORTANT]
+>Follow the steps to successfully install the `_printf` manual.
+
+### Step 1.
+    sudo mv man_3_printf /usr/share/man/man3/_printf.3 
+---
+### Step 2.
+    sudo mandb
+---
+### Step 3.
+    man 3 _printf
+---
+
+## Author
+Christopher Morales Torres
+Email: christophermoralestorres06@gmail.com
