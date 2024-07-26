@@ -1,10 +1,12 @@
 #include "main.h"
 #include <stdarg.h>
+
 /**
 * _printf - Function that produces output according to a format.
 * @format: The format string
 * Return: The formatted string
 */
+
 int _printf(const char *format, ...)
 {
 	convert types[] = {

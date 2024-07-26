@@ -59,4 +59,4 @@ _printf returns the number of characters printed (excluding the null byte used t
 .SH SEE ALSO
 .I printf (3)
 .SH AUTHOR
-Christopher Morales <christophermoralestorres06@gmail.com>
+Christopher Morales Torres <christophermoralestorres06@gmail.com>
