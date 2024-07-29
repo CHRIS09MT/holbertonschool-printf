@@ -96,7 +96,7 @@ To install and use the `_printf` function, follow these steps:
 > You must include this `main.c` in order to compile the `_printf.c` file
 >
 > This project is a custom implementation of the standard `printf` function in C. Ensure to follow the format specifiers correctly to get the desired output.
-### 1) Include this `main.c`:
+### 2) Include this `main.c`:
 
       #include "main.h"
 
@@ -113,10 +113,10 @@ To install and use the `_printf` function, follow these steps:
           return 0;
       }
 
-### 2) Compile the code:
+### 3) Compile the code:
     gcc -o printf_chris -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 main.h *.c
 
-### 3) Run your program:
+### 4) Run your program:
     ./printf_chris
 
 ## Installation of the Man Page
