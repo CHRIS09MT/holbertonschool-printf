@@ -136,4 +136,4 @@ To install and use the `_printf` function, follow these steps:
 
 ## Author
 Christopher Morales Torres
-Email: christophermoralestorres06@gmail.com
+Email: christophermoralestorres@gmail.com
